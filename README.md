@@ -207,8 +207,7 @@ Response
 
 ## Square Feet vs Price
 
-[Square Feet vs Price](screenshots/Square%20Feet%20vs%20Price.pn)
-
+-  [Square Feet vs Price](screenshots/08_squarefeet_vs_price.png)
 ---
 
 ## Future Improvements
