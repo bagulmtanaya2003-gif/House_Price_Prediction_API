@@ -166,42 +166,42 @@ Response
 
 ## API Documentation
 
-[01 API Docs Overview](screenshots/01_api_docs_overview.png.png)
+- [01 API Docs Overview](screenshots/01_api_docs_overview.png.png)
 
 ---
 
 ## Prediction Input
 
-[02 Predict Input Form](screenshots/02_predict_input_form.png.png)
+- [02 Predict Input Form](screenshots/02_predict_input_form.png.png)
 ---
 
 ## Prediction Result
 
-[03 Predict Response](screenshots/03_predict_response.png.png)
+- [03 Predict Response](screenshots/03_predict_response.png.png)
 
 ---
 
 ## Home Endpoint
 
-[04 Home Endpoint](screenshots/04_home_endpoint.png.png)
+- [04 Home Endpoint](screenshots/04_home_endpoint.png.png)
 ---
 
 ## Docker Container Running
 
-[05 Docker Running](screenshots/05_docker_running.png.png)
+- [05 Docker Running](screenshots/05_docker_running.png.png)
 
 
 ---
 
 ## Correlation Heatmap
 
-[Correlation Heatmap](screenshots/Correlation%20Heatmap.png)
+[- Correlation Heatmap](screenshots/Correlation%20Heatmap.png)
 
 ---
 
 ## Price Distribution
 
-[Price Distribution](screenshots/Price%20Distribution.png)
+- [Price Distribution](screenshots/Price%20Distribution.png)
 
 ---
 
