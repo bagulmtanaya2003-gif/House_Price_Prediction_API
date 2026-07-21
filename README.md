@@ -172,43 +172,42 @@ Response
 
 ## Prediction Input
 
-![Predict](screenshots/02_predict_input_form.png)
-
+[02 Predict Input Form](screenshots/02_predict_input_form.png.png)
 ---
 
 ## Prediction Result
 
-![Prediction](screenshots/03_predict_response.png)
+[03 Predict Response](screenshots/03_predict_response.png.png)
 
 ---
 
 ## Home Endpoint
 
-![Home](screenshots/04_home_endpoint.png)
-
+[04 Home Endpoint](screenshots/04_home_endpoint.png.png)
 ---
 
 ## Docker Container Running
 
-![Docker](screenshots/05_docker_running.png)
+[05 Docker Running](screenshots/05_docker_running.png.png)
+
 
 ---
 
 ## Correlation Heatmap
 
-![Heatmap](screenshots/06_correlation_heatmap.png)
+[Correlation Heatmap](screenshots/Correlation%20Heatmap.png)
 
 ---
 
 ## Price Distribution
 
-![Distribution](screenshots/07_price_distribution.png)
+[Price Distribution](screenshots/Price%20Distribution.png)
 
 ---
 
 ## Square Feet vs Price
 
-![Scatter Plot](screenshots/08_squarefeet_vs_price.png)
+[Square Feet vs Price](screenshots/Square%20Feet%20vs%20Price.pn)
 
 ---
 
