@@ -195,7 +195,7 @@ Response
 
 ## Correlation Heatmap
 
-[- Correlation Heatmap](screenshots/Correlation%20Heatmap.png)
+- [Correlation Heatmap](screenshots/Correlation%20Heatmap.png)
 
 ---
 
