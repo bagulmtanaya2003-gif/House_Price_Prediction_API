@@ -21,7 +21,7 @@ def home():
         "message": "Welcome to House Price Prediction API"
     }
 
-@app.get("/predict")
+@app.post("/predict")
 def predict(
     squarefeet: int,
     bedrooms: int,
@@ -29,8 +29,11 @@ def predict(
     neighborhood: Neighborhood,
     yearbuilt: int
 ):
+
+    # Encode Neighborhood
     neighborhood_encoded = encoder.transform([neighborhood.value])[0]
 
+    # Create DataFrame
     data = pd.DataFrame({
         "SquareFeet": [squarefeet],
         "Bedrooms": [bedrooms],
@@ -42,5 +45,5 @@ def predict(
     prediction = model.predict(data)
 
     return {
-        "Predicted Price": float(prediction[0])
+        "Predicted Price": round(float(prediction[0]), 2)
     }
