@@ -166,7 +166,7 @@ Response
 
 ## API Documentation
 
-![API Docs](screenshots/01_api_docs_overview.png)
+![API Docs](screenshots/01_api_docs_overview.png.png)
 
 ---
 
