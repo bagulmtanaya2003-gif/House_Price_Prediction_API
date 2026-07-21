@@ -1,238 +1,237 @@
 # 🏠 House Price Prediction API
 
+A Machine Learning powered REST API built using FastAPI and Docker to predict house prices based on property details.
+
+---
+
 ## 📌 Project Overview
 
-House Price Prediction API is an end-to-end Machine Learning deployment project that predicts house prices based on user-provided input features.
-The project includes data preprocessing, feature encoding, Machine Learning model training, and deployment of the trained model using FastAPI. Docker is 
-used to containerize the application and create a consistent deployment environment.
+This project predicts house prices using a trained Machine Learning model. Users can send house details through a FastAPI endpoint and receive the predicted house price instantly.
+
+The API is containerized using Docker, making deployment and execution simple across different environments.
+
+---
 
 ## 🚀 Features
 
-- Data cleaning and preprocessing
-- Feature encoding for categorical variables
-- Machine Learning model training
-- Real-time house price prediction API
-- FastAPI REST API development
-- Interactive Swagger API documentation
-- Docker containerization
+- Predict house prices using Machine Learning
+- FastAPI REST API
+- Interactive Swagger Documentation
+- Docker Support
+- Input Validation
+- JSON Response
+- Clean Project Structure
 
-## 🛠️ Tech Stack
+---
 
-### Programming Language
+## 🛠 Tech Stack
+
 - Python
-
-### Machine Learning & Data Processing
+- FastAPI
 - Pandas
-- NumPy
 - Scikit-learn
 - Joblib
-
-### API Development
-- FastAPI
-- Uvicorn
-
-### Deployment
 - Docker
+- Swagger UI
+
+---
 
 ## 📂 Project Structure
 
-```
-HOUSE_PRICE_PREDICTION
+House_Price_Prediction/
 
-│
-├── app.py                    # FastAPI application
-├── house_price_model.pkl     # Trained Machine Learning model
-├── encoder.pkl               # Saved feature encoder
-├── clean_housing.csv         # Cleaned dataset
-├── requirements.txt          # Required Python libraries
-├── Dockerfile                # Docker configuration file
-├── README.md                 # Project documentation
-│
-└── screenshots
-    ├── swagger_ui.png
-    ├── prediction_result.png
-    └── docker_container.png
-```
+├── app.py
 
-# ⚙️ How to Run the Project Locally
+├── house_price_model.pkl
 
-Follow these steps to run the House Price Prediction API on your local system.
+├── encoder.pkl
 
-## 1. Clone the Repository
+├── requirements.txt
 
-Download the project from GitHub:
+├── Dockerfile
+
+├── README.md
+
+└── screenshots/
+
+    ├── 01_api_docs_overview.png
+
+    ├── 02_predict_input_form.png
+
+    ├── 03_predict_response.png
+
+    ├── 04_home_endpoint.png
+
+    ├── 05_docker_running.png
+
+    ├── 06_correlation_heatmap.png
+
+    ├── 07_price_distribution.png
+
+    └── 08_squarefeet_vs_price.png
+
+---
+
+## ⚙️ Installation
+
+Clone the repository
 
 ```bash
-git clone <[https://github.com/bagulmtanaya2003-gif/House_Price_Prediction_API]>
+git clone https://github.com/bagulmtanaya2003-gif/House_Price_Prediction.git
 ```
 
-Go inside the project folder:
+Move into the project
 
 ```bash
-cd HOUSE_PRICE_PREDICTION
+cd House_Price_Prediction
 ```
-## 2. Install Required Dependencies
 
-Install all required Python libraries:
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
-The requirements file contains all dependencies required to run the FastAPI application.
 
-## 3. Start FastAPI Application
-
-Run the API server using:
+Run FastAPI
 
 ```bash
 uvicorn app:app --reload
 ```
-Explanation:
 
-- `app` → Python file name (`app.py`)
-- `app` → FastAPI application object created inside the file
-- `--reload` → Automatically restarts server when code changes
-
-After successful execution, the API will start running locally.
-
-## 4. Open Swagger API Documentation
-
-Open your browser:
+Open Swagger Documentation
 
 ```
 http://127.0.0.1:8000/docs
 ```
-FastAPI Swagger UI allows users to:
 
-- View available API endpoints
-- Enter house details
-- Test prediction requests
-- Get predicted house prices
+---
 
-# 🐳 Docker Deployment
+## 🐳 Docker
 
-Docker is used to package the application with all dependencies and run it inside a container.
-
-## 1. Build Docker Image
-
-Create a Docker image:
+Build Docker Image
 
 ```bash
 docker build -t house-price-api .
 ```
 
-## 2. Run Docker Container
-
-Start the application container:
+Run Docker Container
 
 ```bash
 docker run -d --name house-price-container -p 8000:8000 house-price-api
 ```
 
-Explanation:
-
-- `-d` → Runs container in background
-- `--name` → Assigns container name
-- `-p 8000:8000` → Maps local port with container port
-
-## 3. Check Running Container
-
-Verify Docker container:
-
-```bash
-docker ps
-```
-
-## 4. Access API
-
-Open:
+Open
 
 ```
-http://localhost:8000/docs
+http://127.0.0.1:8000/docs
 ```
 
-Swagger UI will be available for testing predictions.
+---
 
-# 📸 API Screenshots
+## 📡 API Endpoints
 
-## Swagger UI
+### Home
 
-FastAPI interactive documentation:
+GET /
 
-```
-screenshots/swagger_ui.png
-```
+Returns welcome message.
 
-## Prediction Output
+---
 
-Sample prediction result:
+### Prediction
 
-```
-screenshots/prediction_result.png
-```
+POST /predict
 
-## Docker Container
+Input Parameters
 
-Running Docker container:
+| Parameter | Type |
+|------------|------|
+| SquareFeet | Integer |
+| Bedrooms | Integer |
+| Bathrooms | Integer |
+| Neighborhood | Rural / Suburb / Urban |
+| YearBuilt | Integer |
 
-```
-screenshots/docker_container.png
-```
+Response
 
-# 📊 Dataset
-
-Dataset used for training:
-
-**Kaggle House Price Dataset**
-
-The dataset was cleaned and preprocessed before training the Machine Learning model.
-
-Data preprocessing steps include:
-
-- Handling missing values
-- Feature transformation
-- Encoding categorical features
-- Preparing data for model training
-
-# 🤖 Machine Learning Model
-
-The trained Machine Learning model is saved using Joblib.
-
-Model file:
-
-```
-house_price_model.pkl
+```json
+{
+    "Predicted Price": 425678.91
+}
 ```
 
-Feature encoder:
+---
 
-```
-encoder.pkl
-```
+# 📷 Project Screenshots
 
-These saved files are loaded by FastAPI during prediction requests.
+## API Documentation
 
-# 🔄 Machine Learning Workflow
+![API Docs](screenshots/01_api_docs_overview.png)
 
-1. Data Collection
-2. Data Cleaning
-3. Exploratory Data Analysis
-4. Feature Engineering
-5. Model Training
-6. Model Saving using Joblib
-7. FastAPI API Development
-8. Docker Deployment
+---
 
-# 🔮 Future Improvements
+## Prediction Input
 
-- Deploy API on AWS / Azure cloud
-- Add frontend interface using Streamlit or React
-- Implement model monitoring
-- Improve model performance
-- Add database integration
+![Predict](screenshots/02_predict_input_form.png)
 
-# 👩‍💻 Author
+---
 
-**Tanaya Bagul**
+## Prediction Result
+
+![Prediction](screenshots/03_predict_response.png)
+
+---
+
+## Home Endpoint
+
+![Home](screenshots/04_home_endpoint.png)
+
+---
+
+## Docker Container Running
+
+![Docker](screenshots/05_docker_running.png)
+
+---
+
+## Correlation Heatmap
+
+![Heatmap](screenshots/06_correlation_heatmap.png)
+
+---
+
+## Price Distribution
+
+![Distribution](screenshots/07_price_distribution.png)
+
+---
+
+## Square Feet vs Price
+
+![Scatter Plot](screenshots/08_squarefeet_vs_price.png)
+
+---
+
+## Future Improvements
+
+- Deploy on Render
+- Database Integration
+- Authentication
+- Model Retraining
+- CI/CD Pipeline
+
+---
+
+## Author
+
+Tanaya Bagul
+
+GitHub
+
+https://github.com/bagulmtanaya2003-gif
+
+LinkedIn
+
+www.linkedin.com/in/tanaya-bagul-b21354285
 
 Machine Learning | Data Science | FastAPI | Docker
